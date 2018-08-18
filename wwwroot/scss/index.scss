@@ -1,0 +1,295 @@
+$theme-primary-color: #fc685f;
+
+@mixin background-style( $path, $position, $bg-size, $repeat, $attachment ) {
+    background: url($path) $position/$bg-size $repeat $attachment;
+}
+
+@mixin pattern-background($color, $path) {
+    background: $color url($path);
+}
+
+@mixin overlay($bg-color) {
+    background-color: $bg-color;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@mixin rounded-border( $amount: 50% ) {
+    -webkit-border-radius: $amount;
+    -moz-border-radius: $amount;
+    -o-border-radius: $amount;
+    -ms-border-radius: $amount;
+    border-radius: $amount;
+}
+
+@mixin skewingx( $amount ) {
+    -webkit-transform: skewX($amount);
+    -moz-transform: skewX($amount);
+    -o-transform: skewX($amount);
+    -ms-transform: skewX($amount);
+    transform: skewX($amount);
+}
+
+@mixin translatingX( $amount: -50% ) {
+    -webkit-transform: translateX($amount);
+    -moz-transform: translateX($amount);
+    -o-transform: translateX($amount);
+    -ms-transform: translateX($amount);
+    transform: translateX($amount);
+}
+
+
+@mixin translatingY( $amount: -50% ) {
+    -webkit-transform: translateY($amount);
+    -moz-transform: translateY($amount);
+    -o-transform: translateY($amount);
+    -ms-transform: translateY($amount);
+    transform: translateY($amount);
+}
+
+@mixin center-by-translating() {
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@mixin transition-time( $time: 0.5s, $prop: all ) {
+    -webkit-transition: $prop $time;
+    -moz-transition: $prop $time;
+    -o-transition: $prop $time;
+    -ms-transition: $prop $time;
+    transition: $prop $time;
+}
+
+@mixin round-box-shadow( $color, $blur:5px, $sprade:5px ) {
+    -webkit-box-shadow: 0 0 $blur $sprade $color;
+    -moz-box-shadow: 0 0 $blur $sprade $color;
+    -o-box-shadow: 0 0 $blur $sprade $color;
+    -ms-box-shadow: 0 0 $blur $sprade $color;
+    box-shadow: 0 0 $blur $sprade $color;
+}
+
+@mixin widther( $length ) {
+    @media screen and (min-width: $length)  {
+        @content;
+    }
+}
+
+@mixin media-query( $length ) {
+    @media (max-width: $length) {
+        @content;
+    }
+}
+
+@mixin placeholder-style( $color, $font-size:18px, $font-style: italic ) {
+    ::-webkit-input-placeholder {
+        font-style: $font-size;
+        font-style: $font-style;
+        color: $color;
+    }
+
+    :-moz-placeholder {
+        font-style: $font-size;
+        font-style: $font-style;
+        color: $color;
+    }
+
+    ::-moz-placeholder {
+        font-style: $font-size;
+        font-style: $font-style;
+        color: $color;
+    }
+
+    :-ms-input-placeholder {
+        font-style: $font-size;
+        font-style: $font-style;
+        color: $color;
+    }
+}
+
+.story-section {
+
+	.story-timeline {
+		position: relative;
+
+		&:after {
+			content: "";
+			background: transparentize(red, 0.9);
+			width: 2px;
+			height: 100%;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			@include translatingX();
+
+			@include media-query(991px) {
+				display: none;
+			}
+		}
+	}
+
+	.story-timeline > .row {
+		position: relative;
+
+		.horizontal-line {
+			background: transparentize(red, 0.9);
+			width: 70%;
+			height: 1px;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			@include translatingX();
+		}
+	}
+
+	.story-timeline > .row + .row {
+		margin-top: 50px;
+		padding-top: 15px;
+
+		@include media-query(991px) {
+			padding-top: 0;
+		}
+	}
+
+	.story-timeline > .row > .col:first-child {
+		padding: 0 45px 0 100px;
+		
+		@include media-query(1199px) {
+			padding: 0 45px 0 70px;
+		}
+
+		@include media-query(991px) {
+			padding: 0 15px;
+		}
+	}
+
+	.story-timeline > .row > .col:last-child {
+		padding: 0 100px 0 45px;
+		
+		@include media-query(1199px) {
+			padding: 0 70px 0 45px;
+		}
+
+		@include media-query(991px) {
+			padding: 0 15px;
+		}
+	}
+
+	.story-timeline .story-text {
+		@include media-query(991px) {
+			background: transparentize($theme-primary-color, 0.95);
+			padding: 35px 25px;
+		}
+	}
+
+	.story-timeline .right-align-text {
+		@include widther(992px) {
+			text-align: right;
+		}
+	}
+
+	.story-timeline .text-holder {
+		border-top: 1px solid transparentize($theme-primary-color, 0.9);
+		padding-top: 45px !important;
+		position: relative;
+
+		@include media-query(991px) {
+			border: 0;
+			padding-top: 0 !important;
+		}
+
+		.heart {
+			background-color: lighten($theme-primary-color, 20%);
+			width: 43px;
+			height: 43px;
+			line-height: 41px;
+			text-align: center;
+			border: 2px solid transparentize(red, 0.5);;
+			position: absolute;
+			left: -22px;
+			top: -22px;	
+			@include rounded-border();
+			z-index: 10;
+
+			@include media-query(991px) {
+				display: none;
+			}
+		}
+
+		.fa {
+			color: white;
+		}
+	}
+
+	.story-timeline .right-heart .heart {
+		left: auto;
+		right: -22px;
+	}
+
+	.story-timeline h3 {
+		font-size: 22px;
+		font-size: calc-rem-value(22);
+		font-weight: 600;
+		color: $theme-primary-color;
+		margin: 0 0 0.5em;
+		text-transform: uppercase;
+
+		@include media-query(991px) {
+			font-size: 20px;
+			font-size: calc-rem-value(20);
+		}
+
+		@include media-query(767px) {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+		}
+	}
+
+	.story-timeline .date {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		font-weight: 600;
+		display: block;
+		margin-bottom: 15px;
+		//text-transform: uppercase;
+	}
+
+	.story-timeline img {
+        display: inline-block;    
+        width: 100%;
+        height: auto;
+	}
+
+	.video-holder {
+		position: relative;
+
+		.video-play-btn {
+			background: transparentize(white, 0.2);
+			width: 60px;
+			height: 60px;
+			line-height: 57px;
+			text-align: center;
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+			border: 2px solid white;
+			@include rounded-border();
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			@include center-by-translating();
+		}
+
+		.video-play-btn i {
+			color: $theme-primary-color
+		}
+	}
+
+	.story-timeline .story-slider .owl-controls {
+		display: none;
+	}
+}
