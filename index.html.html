@@ -100,45 +100,44 @@
 
     <!--Section: Save The Date -->
     <section class="std-section">
-        @await Html.PartialAsync("_SaveTheDatePartial")
+        
     </section>
 
     <!--Section: Countdown-->
     <section class="countdown-section view jarallax" data-jarallax data-speed="-0.2" data-img-position="16% 50%" style="height:450px">
-        @await Html.PartialAsync("_CountdownPartial")
+        
         <img class="jarallax-img" src="~/img/countdown-bg.jpg" alt="">
     </section>
 
     <!--Section: Our Story-->
     <section class="story-section" id="story">
-        @await Html.PartialAsync("_OurStoryPartial")
+        
     </section>
 
     <!--Section: Celebrate-->
     <section class="celebrate-section view jarallax" data-jarallax data-speed="-0.2" data-img-position="5% 20%" style="height:450px">
-        @await Html.PartialAsync("_CelebratePartial")
+        
         <img class="jarallax-img" src="~/img/celebrate-bg.jpg" alt="">
     </section>
 
     <!--Section: Wedding Day-->
     <section class="wedding-day-section" id="wedding">
-        @await Html.PartialAsync("_WeddingDayPartial")
-    </section>
+        
 
     <!--Section: Meet The Team-->
     <section class="meet-team-section wow fadeIn" id="team" style="background-color: #f9f9f9;" >
-        @await Html.PartialAsync("_TeamPartial")
+        
     </section>
 
     <!--Section: RSVP-->
     <section class="rsvp-section jarallax p-0" id="rsvp" data-jarallax data-speed="-0.2" data-img-position="5% 50%">
-        @await Html.PartialAsync("_RSVPPartial")
+        
         <img class="jarallax-img" src="~/img/rsvp.jpg" alt="">
     </section>
 
     <!--Section: Gallery-->
     <section class="gallery-section" id="gallery" style="background-color: #f9f9f9;" >
-        @await Html.PartialAsync("_GalleryPartial")
+        
     </section>
 </div>
 
@@ -274,90 +273,3 @@
 	
 </body>
 </html>
-
-@section Scripts {
-
-
-    <script type="text/javascript">
-
-        $( document ).ready(function() {
-            $('[data-fancybox="images"]').fancybox({
-                margin : [44,0,22,0]
-            });
-
-            $.fancybox.defaults.hideScrollbar = false;
-        });
-
-    </script>
-
-    <script type="text/javascript">
-        // Set the date we're counting down to
-        var countDownDate = new Date('2019-09-21');
-        countDownDate.setDate(0);
-
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-            // Get todays date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now an the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            $('.days').each(function (i, elem) {
-                $(this).html(days);
-            })
-
-            $('.hours').each(function (i, elem) {
-                $(this).html(hours);
-            })
-
-            $('.minutes').each(function (i, elem) {
-                $(this).html(minutes);
-            })
-
-            $('.seconds').each(function (i, elem) {
-                $(this).html(seconds);
-            })
-
-
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById(elemId).innerHTML = "EXPIRED";
-            }
-
-        }, 1000);
-
-        function DisplayTimeCounter(elemId) {
-
-            // Get todays date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now an the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the element with id="demo"
-            document.getElementById(elemId).innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
-
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById(elemId).innerHTML = "EXPIRED";
-            }
-
-        }
-    </script>
-}
