@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ANTs VICtory</title>
+    <link rel="icon" href="~/favicon.ico?v=2" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="~/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css"
+    <!-- Your custom styles (optional) -->
+    <link href="~/css/style.min.css" rel="stylesheet">
+    <style type="text/css">
+
+        @@font-face {
+            font-family: 'ChampLim';
+            src: url('/font/champandlim/Champagne__Limousines.woff') format('woff');
+        }
+
+        @@font-face {
+            font-family: 'Vollkorn';
+            src: url('/font/vollkorn/Vollkorn-Regular.WOFF') format('woff');
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div style="width:100%;">
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <div class="d-flex">
+                    <span class="navbar-toggler-icon mr-3"></span>
+                </div>
+            </button>
+            <!-- Links -->
+            <div class="collapse navbar-collapse justify-content-center multi-collapse">
+                <!-- Left -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#story">Our Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#wedding">Wedding Day</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#team">The Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#rsvp">RSVP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#registry">Registry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#gallery">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	
+<a id="home"></a>
+
+<div class="view jarallax" data-jarallax data-speed="-0.2">
+    <div class="mask rgba-mdb-color-light d-flex" style="cursor:auto;">
+        <!-- Content -->
+        <div class="idy_idy_rotated_all">
+
+            <div class="idy_slider_round">
+                <div class="idy_slider_round_txt">
+                    Join Us
+                    <b>Anthony &amp; Victoria</b>
+                    09.21.2019
+                </div>
+                <div class="idy_slider_round_lines"></div>
+            </div>
+
+        </div>
+        <!-- Content -->
+    </div>
+    <img class="jarallax-img" src="~/img/carousel/carousel-3.jpg" alt="">
+</div>
+
+    <!--Section: Save The Date -->
+    <section class="std-section">
+        @await Html.PartialAsync("_SaveTheDatePartial")
+    </section>
+
+    <!--Section: Countdown-->
+    <section class="countdown-section view jarallax" data-jarallax data-speed="-0.2" data-img-position="16% 50%" style="height:450px">
+        @await Html.PartialAsync("_CountdownPartial")
+        <img class="jarallax-img" src="~/img/countdown-bg.jpg" alt="">
+    </section>
+
+    <!--Section: Our Story-->
+    <section class="story-section" id="story">
+        @await Html.PartialAsync("_OurStoryPartial")
+    </section>
+
+    <!--Section: Celebrate-->
+    <section class="celebrate-section view jarallax" data-jarallax data-speed="-0.2" data-img-position="5% 20%" style="height:450px">
+        @await Html.PartialAsync("_CelebratePartial")
+        <img class="jarallax-img" src="~/img/celebrate-bg.jpg" alt="">
+    </section>
+
+    <!--Section: Wedding Day-->
+    <section class="wedding-day-section" id="wedding">
+        @await Html.PartialAsync("_WeddingDayPartial")
+    </section>
+
+    <!--Section: Meet The Team-->
+    <section class="meet-team-section wow fadeIn" id="team" style="background-color: #f9f9f9;" >
+        @await Html.PartialAsync("_TeamPartial")
+    </section>
+
+    <!--Section: RSVP-->
+    <section class="rsvp-section jarallax p-0" id="rsvp" data-jarallax data-speed="-0.2" data-img-position="5% 50%">
+        @await Html.PartialAsync("_RSVPPartial")
+        <img class="jarallax-img" src="~/img/rsvp.jpg" alt="">
+    </section>
+
+    <!--Section: Gallery-->
+    <section class="gallery-section" id="gallery" style="background-color: #f9f9f9;" >
+        @await Html.PartialAsync("_GalleryPartial")
+    </section>
+</div>
+
+<!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="~/js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="~/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="~/js/mdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+
+        // Select all links with hashes
+        $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+            // On-page links
+            if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+            && 
+            location.hostname == this.hostname
+            ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                scrollTop: target.offset().top
+                }, 1000, function() {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                } else {
+                    $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                };
+                });
+            }
+            }
+        });
+		
+		$( document ).ready(function() {
+            $('[data-fancybox="images"]').fancybox({
+                margin : [44,0,22,0]
+            });
+
+            $.fancybox.defaults.hideScrollbar = false;
+        });
+		
+		// Set the date we're counting down to
+        var countDownDate = new Date('2019-09-21');
+        countDownDate.setDate(0);
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            $('.days').each(function (i, elem) {
+                $(this).html(days);
+            })
+
+            $('.hours').each(function (i, elem) {
+                $(this).html(hours);
+            })
+
+            $('.minutes').each(function (i, elem) {
+                $(this).html(minutes);
+            })
+
+            $('.seconds').each(function (i, elem) {
+                $(this).html(seconds);
+            })
+
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById(elemId).innerHTML = "EXPIRED";
+            }
+
+        }, 1000);
+
+        function DisplayTimeCounter(elemId) {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById(elemId).innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById(elemId).innerHTML = "EXPIRED";
+            }
+
+        }
+    </script>
+	
+</body>
+</html>
+
+@section Scripts {
+
+
+    <script type="text/javascript">
+
+        $( document ).ready(function() {
+            $('[data-fancybox="images"]').fancybox({
+                margin : [44,0,22,0]
+            });
+
+            $.fancybox.defaults.hideScrollbar = false;
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        // Set the date we're counting down to
+        var countDownDate = new Date('2019-09-21');
+        countDownDate.setDate(0);
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            $('.days').each(function (i, elem) {
+                $(this).html(days);
+            })
+
+            $('.hours').each(function (i, elem) {
+                $(this).html(hours);
+            })
+
+            $('.minutes').each(function (i, elem) {
+                $(this).html(minutes);
+            })
+
+            $('.seconds').each(function (i, elem) {
+                $(this).html(seconds);
+            })
+
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById(elemId).innerHTML = "EXPIRED";
+            }
+
+        }, 1000);
+
+        function DisplayTimeCounter(elemId) {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById(elemId).innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById(elemId).innerHTML = "EXPIRED";
+            }
+
+        }
+    </script>
+}
