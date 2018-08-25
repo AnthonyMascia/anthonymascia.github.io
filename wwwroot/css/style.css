@@ -254,22 +254,22 @@ section.idy_box {
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
   }
-  
+
   .card.card-cascade.wider {
     -webkit-box-shadow: none;
     box-shadow: none;
     background-color: transparent;
   }
-  
+
   .card.card-cascade.wider .view.view-cascade {
     z-index: 2;
   }
-  
+
   .card.card-cascade .view.view-cascade.gradient-card-header {
     padding: 1.6rem 1rem;
     text-align: center;
   }
-  
+
   .card.card-cascade.wider .card-body.card-body-cascade {
     -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
@@ -280,19 +280,19 @@ section.idy_box {
     -webkit-border-radius: 0 0 .25rem .25rem;
     border-radius: 0 0 .25rem .25rem;
   }
-  
+
   .card .card-body .card-text {
     color: #747373;
     font-size: .9rem;
     font-weight: 400;
   }
-  
+
   .card {
         -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
         box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
         border: 0;
         font-weight: 400;
-    }   
+    }
 
 .card.card-cascade .view.view-cascade {
     -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
@@ -511,8 +511,8 @@ section.idy_box {
     div.card.card-cascade {
         margin-bottom: 15px;
     }
-	
-	@media (min-width: 350px) {
+
+	@media (min-width: 0) {
         section.std-section div.img {
             display: none;
         }
@@ -522,7 +522,7 @@ section.idy_box {
         section.std-section div.img {
             display: block;
         }
-        
+
         section.std-section .idy_about_photo {
             height: 200px;
             width: 200px;
@@ -535,7 +535,7 @@ section.idy_box {
             width: 290px;
         }
     }
-	
+
     section.countdown-section#clock {
         overflow: hidden;
     }
@@ -560,7 +560,7 @@ section.idy_box {
                 margin-bottom: -10px;
                 text-align: center;
             }
-            
+
     section.countdown-section h1.h1-responsive {
         font-family:'Great Vibes';
         color: white;
@@ -605,7 +605,7 @@ section.idy_box {
             padding-bottom: 25px;
         }
     }
-	
+
 	    section.celebrate-section h1.h1-responsive {
         font-family:'Great Vibes';
         color: white;
@@ -645,9 +645,9 @@ section.idy_box {
                 font-size: 225%;
             }
         }
-		
+
     section.wedding-day-section ul {
-        list-style-type: none;    
+        list-style-type: none;
         padding-left: 0;
         margin: 0;
     }
@@ -670,16 +670,16 @@ section.idy_box {
     }
 
     section.wedding-day-section a {
-        color: #fc685f;    
+        color: #fc685f;
         font-weight: 600;
         display: inline-block;
         margin-top: 8px;
     }
 
         section.wedding-day-section a:hover {
-            color: #fc685f;    
+            color: #fc685f;
         }
-        
+
     #team_carousel.carousel .carousel-indicators {
         position: relative;
     }
@@ -702,7 +702,7 @@ section.idy_box {
             background-color: transparent;
         }
 
-            #team_carousel.carousel .carousel-indicators li.active h3 a { 
+            #team_carousel.carousel .carousel-indicators li.active h3 a {
                 color: #fd9791 !important;
             }
 
@@ -717,7 +717,7 @@ section.idy_box {
     #team_carousel div.avatar > img {
         max-height: 200px;
     }
-	
+
     section.rsvp-section h1 {
         font-family:'Great Vibes';
         font-size: 6rem;
@@ -730,7 +730,7 @@ section.idy_box {
         align-items: center;
         display: flex;
     }
-	
+
 section.gallery-section a, a:focus {
         color: transparent;
     }
@@ -751,7 +751,7 @@ section.gallery-section a, a:focus {
             height: 350px;
         }
     }
-    
+
     @media (min-width: 992px) {
         section.gallery-section img {
             height: 300px;
@@ -776,7 +776,7 @@ section.gallery-section a, a:focus {
             box-sizing: border-box;
             background: rgba(0, 0, 0, 0.3);
         }
-        
+
         .fancybox-show-thumbs .fancybox-inner {
             right: 0;
             bottom: 95px;
