@@ -541,9 +541,20 @@ section.idy_box {
         }
     }
 
+    section.countdown-section .countdown-box {
+        background: rgba(255,255,255,.9);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        border: 5px solid rgba(0,0,0,.1);
+    }
+
     section.countdown-section#clock {
         overflow: hidden;
     }
+    
 
         section.countdown-section #clock div.box {
             background: rgba(255, 255, 255, 0.9);
